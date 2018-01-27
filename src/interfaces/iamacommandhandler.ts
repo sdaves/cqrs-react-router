@@ -1,5 +1,5 @@
 import {IAmACommand} from "./iamacommand";
-import {IDomainService} from "../idomainservice";
+import {IDomainService} from "./idomainservice";
 
 export interface IAmACommandHandler{
     commandNames: string[];
