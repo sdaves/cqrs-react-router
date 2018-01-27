@@ -1,8 +1,8 @@
 import {IAmACommand} from "./iamacommand";
-import {DomainService} from "../services/domainservice";
+import {IDomainService} from "../idomainservice";
 
 export interface IAmACommandHandler{
     commandNames: string[];
 
-    handle(command: IAmACommand, domainService: DomainService, callback: (command: IAmACommand) => void): void;
+    handle(command: IAmACommand, domainService: IDomainService, callback: (command: IAmACommand) => void): void;
 }
