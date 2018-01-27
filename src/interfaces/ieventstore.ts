@@ -1,9 +1,9 @@
 import {IAmADomainEvent} from "../iamadomainevent";
-import {ClockDate} from "../helpers/clock";
+import {IClockDate} from "../iclockdate";
 
 export interface IEventStore{
     storeEvent(event: IAmADomainEvent): void;
-    replayEvents(finalTime?: ClockDate, millisecondsInterval?: number, hardReplay: boolean = false): void;
+    replayEvents(finalTime?: IClockDate, millisecondsInterval?: number, hardReplay: boolean = false): void;
     replayEventsUpTo(domainEvent: IAmADomainEvent, millisecondsInterval?: number, hardReplay: boolean = false, inclusive: boolean = true): void;
     onEventStored(callback: (event: IAmADomainEvent) => void): void;
     removeOnEventStoredEvent(callback: (event: IAmADomainEvent) => void): void;
