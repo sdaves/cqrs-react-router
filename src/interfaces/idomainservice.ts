@@ -1,5 +1,5 @@
-import {IAggregateRoot} from "../iaggregateroot";
-import {IAmADomainEvent} from "../iamadomainevent";
+import {IAggregateRoot} from "./iaggregateroot";
+import {IAmADomainEvent} from "./iamadomainevent";
 
 export interface IDomainService{
     getAggregateRoot<T implements IAggregateRoot>(c: {new(id?: string): T; }, callback: (aggregateRoot: T) => void, id?: string): void;
