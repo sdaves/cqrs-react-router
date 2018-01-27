@@ -1,6 +1,6 @@
 import {IAmADomainEvent} from "../interfaces/iamadomainevent";
 import {IEventStore} from "../interfaces/ieventstore";
-import {ClockDate} from "../helpers/clock";
+import {IClockDate} from "../interfaces/iclockdate";
 
 export class EventStore implements IEventStore{
 
@@ -14,7 +14,7 @@ export class EventStore implements IEventStore{
         })
     }
 
-    replayEvents(finalTime?: ClockDate, millisecondsInterval?: number, hardReplay: boolean = false){
+    replayEvents(finalTime?: IClockDate, millisecondsInterval?: number, hardReplay: boolean = false){
         var self = this;
         var eventsToReplay = self._events.filter((event) => {
             return finalTime == null 
