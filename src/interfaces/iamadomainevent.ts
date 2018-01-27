@@ -1,9 +1,12 @@
-import {Clock, ClockDate} from "../helpers/clock";
+import {ClockDate} from "../iclockdate";
 
 export interface IAmADomainEvent{
 
     name: string;
     aggregateID: string;
-    created?: ClockDate;
+    created?: IClockDate;
 
 }
+
+// Symbol used during runtime for dependency injection
+export const IAmADomainEvent = Symbol('IAmADomainEvent')
