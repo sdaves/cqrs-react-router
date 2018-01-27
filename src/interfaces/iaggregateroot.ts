@@ -7,3 +7,6 @@ export interface IAggregateRoot{
     storeEvent(event: IAmADomainEvent): void;
     applyEvent(event: IAmADomainEvent): void;
 }
+
+// Symbol used during runtime for dependency injection
+export const IEventStore = Symbol('IEventStore')
