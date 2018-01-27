@@ -1,5 +1,5 @@
-import { IAmADomainEvent } from "../iamadomainevent";
-import { IEventStore } from "../ieventstore";
+import { IAmADomainEvent } from "./iamadomainevent";
+import { IEventStore } from "./ieventstore";
 
 export interface IAggregateRoot{
     ID: string;
