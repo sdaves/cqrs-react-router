@@ -1,17 +1,18 @@
-import {AggregateRoot} from "../objects/aggregateroot";
-import {EventStore} from "../services/eventstore";
+import {IAggregateRoot} from "../interfaces/iaggregateroot";
+import {IEventStore} from "../interfaces/ieventstore";
+import {IDomainService} from "../interfaces/idomainservice";
 import {IAmADomainEvent} from "../interfaces/iamadomainevent";
 
-export class DomainService{
+export class DomainService implements IDomainService{
 
-    private _aggregateRoots: AggregateRoot[] = [];
-    private _eventStore: EventStore;
+    private _aggregateRoots: IAggregateRoot[] = [];
+    private _eventStore: IEventStore;
 
-    constructor(eventStore: EventStore){
+    constructor(eventStore: IEventStore){
         this._eventStore = eventStore;
     }
 
-    getAggregateRoot<T extends AggregateRoot>(c: {new(id?: string): T; }, callback: (aggregateRoot: T) => void, id?: string){
+    getAggregateRoot<T implements IAggregateRoot>(c: {new(id?: string): T; }, callback: (aggregateRoot: T) => void, id?: string){
         var self = this;
         var similarAggregateRoots = self._aggregateRoots.filter((ar) => {
             return ar.ID === id;
