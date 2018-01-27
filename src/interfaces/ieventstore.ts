@@ -1,5 +1,5 @@
-import {IAmADomainEvent} from "../iamadomainevent";
-import {IClockDate} from "../iclockdate";
+import {IAmADomainEvent} from "./iamadomainevent";
+import {IClockDate} from "./iclockdate";
 
 export interface IEventStore{
     storeEvent(event: IAmADomainEvent): void;
