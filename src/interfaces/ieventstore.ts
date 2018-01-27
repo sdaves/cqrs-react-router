@@ -1,4 +1,4 @@
-import {IAmADomainEvent} from "../interfaces/iamadomainevent";
+import {IAmADomainEvent} from "../iamadomainevent";
 import {ClockDate} from "../helpers/clock";
 
 export interface IEventStore{
