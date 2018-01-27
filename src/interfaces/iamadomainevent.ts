@@ -1,4 +1,4 @@
-import {IClockDate} from "../iclockdate";
+import {IClockDate} from "./iclockdate";
 
 export interface IAmADomainEvent{
 
