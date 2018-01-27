@@ -1,7 +1,8 @@
 import {IAmADomainEvent} from "../interfaces/iamadomainevent";
+import {IEventStore} from "../interfaces/ieventstore";
 import {ClockDate} from "../helpers/clock";
 
-export class EventStore{
+export class EventStore implements IEventStore{
 
     private _events: IAmADomainEvent[] = [];
     private _onEventStoredEvents: ((event: IAmADomainEvent) => void)[] = [];
