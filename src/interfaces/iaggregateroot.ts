@@ -9,4 +9,4 @@ export interface IAggregateRoot{
 }
 
 // Symbol used during runtime for dependency injection
-export const IEventStore = Symbol('IEventStore')
+export const IAggregateRoot = Symbol('IAggregateRoot')
