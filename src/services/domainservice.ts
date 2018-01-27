@@ -12,7 +12,7 @@ export class DomainService implements IDomainService{
         this._eventStore = eventStore;
     }
 
-    getAggregateRoot<T implements IAggregateRoot>(c: {new(id?: string): T; }, callback: (aggregateRoot: T) => void, id?: string){
+    getAggregateRoot<T extends IAggregateRoot>(c: {new(id?: string): T; }, callback: (aggregateRoot: T) => void, id?: string){
         var self = this;
         var similarAggregateRoots = self._aggregateRoots.filter((ar) => {
             return ar.ID === id;
