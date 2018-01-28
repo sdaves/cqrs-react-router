@@ -19,3 +19,7 @@ export {DatedEvent} from "./objects/datedevent";
 export {AuditedEvent} from "./objects/auditedevent";
 export {IAmAValueObject} from "./interfaces/iamavalueobject";
 export {PageNavigatedEvent} from "./objects/pagenavigated";
+export {IAggregateRoot} from "./interfaces/iaggregateroot";
+export {IClockDate} from "./interfaces/iclockdate";
+export {IDomainService} from "./interfaces/idomainservice";
+export {IEventStore} from "./interfaces/ieventstore";
