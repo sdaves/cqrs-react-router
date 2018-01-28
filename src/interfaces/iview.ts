@@ -1,6 +1,6 @@
 import {IAmADomainEvent} from "./iamadomainevent";
 
-interface IView {
+export interface IView {
    name: string;
 
    handle(event: IAmADomainEvent);
