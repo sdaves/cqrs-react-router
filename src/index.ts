@@ -1,3 +1,4 @@
+import "core-js/es6/symbol";
 export {Clock, ClockDate, fixDates, ClockDateRange} from "./helpers/clock"
 export {Guid} from "./helpers/guid";
 export {IAmACommand} from "./interfaces/iamacommand";
