@@ -23,3 +23,4 @@ export {IAggregateRoot} from "./interfaces/iaggregateroot";
 export {IClockDate} from "./interfaces/iclockdate";
 export {IDomainService} from "./interfaces/idomainservice";
 export {IEventStore} from "./interfaces/ieventstore";
+export {IView} from "./interfaces/iview";
