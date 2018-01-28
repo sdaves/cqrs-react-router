@@ -5,3 +5,6 @@ export interface IView {
 
    handle(event: IAmADomainEvent);
 }
+
+// Symbol used during runtime for dependency injection
+export const IView = Symbol('IView');
